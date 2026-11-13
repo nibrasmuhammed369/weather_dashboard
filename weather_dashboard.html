@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Weather Dashboard</title>
+
+    <link rel="stylesheet" href="weather_dashboard.css" />
+    
+  </head>
+
+  <body>
+    <div class="container">
+        <div class="nav-bar">
+            <!-- Search Section -->
+
+            <div class="search-section">
+            <input type="text" id="cityInput" placeholder="Enter city name..." />
+
+            <button id="searchBtn">Search Weather</button>
+            </div>
+            <!-- Theme Toggle -->
+
+            <div class="theme-toggle">
+            <button id="themeBtn">🌙 Dark</button>
+            </div>
+        </div>
+        <div>
+            <p id="error" class="error"></p>
+        </div>
+        <div id="weatherResults" class="hidden">
+            <div class="first-section">
+                <!-- time Display -->
+
+                <div id="timeCard" class="time-card" >
+                    <div id="time" class="time">10:45 AM</div>
+                    <div id="date" class="date">Tuesday, Nov 10, 2026</div>
+                </div>
+
+                <!-- weather card -->
+
+                <div id="WeatherCard" class="weather-card" >
+                    <div class="main">
+                        <div>
+                            <div id="temp" class="temp">
+                                28°C
+                            </div>
+                            <div id="location" class="location">Kochi</div>
+                        </div>
+                        <button id="favorite-btn" class="favorite-btn">Favorite</button>
+                    </div>
+                    <div class="main-logo">
+                        <img src="https://img.icons8.com/?size=100&id=8LM7-CYX4BPD&format=png&color=000000" id="weather-icon" class="weather-icon">
+                        <div id="condition" class="condition">Sunny</div>
+                    </div>
+                    <div class="details">
+                        <div class="col1">
+                            <img src="https://img.icons8.com/?size=100&id=18504&format=png&color=FFFFFF">
+                            <div>
+                                <p id="humidity" class="humidity">50%</p>
+                                <p>Humidity</p>
+                            </div>
+                        </div>
+                        <div class="col2">
+                            <img src="https://img.icons8.com/?size=100&id=31842&format=png&color=FFFFFF">
+                            <div>
+                                <p id="wind" class="wind">120 Km/h</p>
+                                <p>Wind</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="second-section">
+                <div class="forecast" id="forecastContainer"></div>
+
+                <!-- Favorites -->
+
+                <div class="favorites-section">
+                    <h3>Favorites</h3>
+
+                    <div id="favoritesList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="config.js"></script>
+    <script src="weather_dashboard.js"></script>
+  </body>
+</html>

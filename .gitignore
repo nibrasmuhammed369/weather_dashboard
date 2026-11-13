@@ -1,0 +1,11 @@
+
+# Ignore environment files
+.env
+.env.*
+!.env.example
+
+# Ignore local API configuration
+config.js
+
+# Ignore system files
+.DS_Store
